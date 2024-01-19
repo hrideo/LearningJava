@@ -2,17 +2,15 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        double studentGPA = 3.5;
-        String studentFirstName = "Alpha";
-        String studentLastName = "Zulu";
-        System.out.println(studentFirstName + " " + studentLastName +
-                " has a GPA of " + studentGPA);
-        System.out.println("What do you want to update it to?");
-
+        System.out.println("Pick a number between 1 to 10");
         Scanner input = new Scanner(System.in);
-        studentGPA = input.nextDouble();
 
-        System.out.println(studentFirstName + " " + studentLastName +
-                " now has the GPA of " + studentGPA);
+        int inputtedNum = input.nextInt();
+
+        if (inputtedNum < 5){
+        System.out.println("enjoy the luck of good friend");
+        } else {
+            System.out.println("your show collection will make you happy today");
+        }
     }
 }
