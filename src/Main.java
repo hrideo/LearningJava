@@ -3,9 +3,9 @@ public class Main {
 
     public static void main(String[] args) {
         String question ="Which of the following is the largest country in the world by area?";
-        String choiceOne ="Canada";
-        String choiceTwo ="Russia";
-        String choiceThree ="China";
+        String choiceOne ="canada";
+        String choiceTwo ="russia";
+        String choiceThree ="china";
 
         String correctAnswer = choiceTwo;
 
@@ -22,7 +22,7 @@ public class Main {
 
         // If the user's input matches the correctAnswer...
         // then the user is correct and we want to print out a congrats message to the user.
-        if(userAnswer.equals(correctAnswer)){
+        if(correctAnswer.equals(userAnswer.toLowerCase())){
             System.out.println("Congrats your answer is correct!");
         }
         // If the user's input does not match the correctAnswer...
