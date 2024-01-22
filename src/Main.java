@@ -2,15 +2,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Pick a number between 1 to 10");
         Scanner input = new Scanner(System.in);
+        boolean isOnRepeat = true;
+        while(isOnRepeat){
+            System.out.println("Playing current song");
+            System.out.println("Would you like to take this song off from repeat. If so answer yes");
+            String userInput = input.next();
 
-        int inputtedNum = input.nextInt();
-
-        if (inputtedNum < 5){
-        System.out.println("enjoy the luck of good friend");
-        } else {
-            System.out.println("your show collection will make you happy today");
+            if(userInput.equals("yes")){
+                isOnRepeat = false;
+            }
         }
+        System.out.println("Playing next song");
     }
 }
