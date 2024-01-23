@@ -1,35 +1,30 @@
 import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        String question ="Which of the following is the largest country in the world by area?";
-        String choiceOne ="canada";
-        String choiceTwo ="russia";
-        String choiceThree ="china";
 
-        String correctAnswer = choiceTwo;
+        System.out.println("Let's calculate the area of a triangle");
 
-        // Write a print statement asking the question
-        System.out.println(question);
-        // Write a print statement giving the answer choices
-        System.out.println("The choices are " + choiceOne + " " + choiceTwo + " " + choiceThree);
-
-        // Have the user input an answer
-        System.out.println("Enter your answer: ");
         Scanner input = new Scanner(System.in);
-        // Retrieve the user's input
-        String userAnswer = input.next();
 
-        // If the user's input matches the correctAnswer...
-        // then the user is correct and we want to print out a congrats message to the user.
-        if(correctAnswer.equals(userAnswer.toLowerCase())){
-            System.out.println("Congrats your answer is correct!");
+        System.out.println("Please input the base of the triangle (in inches).");
+        double base = input.nextDouble()
+
+        while (base <= 0) {
+            System.out.println("That's invalid. Please input the base of the triangle (in inches).");
+            base = input.nextDouble();
         }
-        // If the user's input does not match the correctAnswer...
-        // then the user is incorrect and we want to print out a message saying that the
-        // user is incorrect as well as what the correct choice was.
-        else{
-            System.out.println("Sorry your answer is incorrect. The correct answer is " + correctAnswer);
+
+        System.out.println("Please input the height of the triangle (in inches).");
+        double height = input.nextDouble();
+        while (height <= 0) {
+            System.out.println("That's invalid. Please input the base of the triangle (in inches).");
+            base = input.nextDouble();
         }
+
+        double area = (base * height) / 2;
+        System.out.println("The area is " + height);
+
     }
 }
