@@ -1,7 +1,8 @@
 public class Main{
 
     public static double grossYearlySalary( double hoursPerWeek,
-                                            double moneyPerHour){
+                                            double moneyPerHour,
+                                            int vacationDays){
         if (hoursPerWeek < 0){
             return -1;
         }
@@ -10,11 +11,12 @@ public class Main{
         }
 
         double weeklySalary = hoursPerWeek * moneyPerHour;
-        return weeklySalary * 52;
+        double unpaidTime = vacationDays * moneyPerHour * 8; //8 is used bcoz it is given hours in 1 vacation day
+        return (weeklySalary * 52) - unpaidTime;
     }
 
     public static void main(String[] args){
-        double salary = grossYearlySalary(40, 2);
+        double salary = grossYearlySalary(40, 2, 8);
         System.out.println(salary);
     }
 }
