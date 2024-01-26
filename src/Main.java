@@ -1,15 +1,20 @@
 public class Main{
 
-    public static double grossWeeklySalary( double hoursPerWeek, double moneyPerHour){
-        double result = hoursPerWeek * moneyPerHour;
-        return result;
+    public static double grossYearlySalary( double hoursPerWeek,
+                                            double moneyPerHour){
+        if (hoursPerWeek < 0){
+            return -1;
+        }
+        if (moneyPerHour < 0){
+            return -1;
+        }
+
+        double weeklySalary = hoursPerWeek * moneyPerHour;
+        return weeklySalary * 52;
     }
 
     public static void main(String[] args){
-        double weeklySalary = grossWeeklySalary(40, 2);
-        System.out.println(weeklySalary);
-
-        double yearlySalary = weeklySalary * 52;
-        System.out.println(yearlySalary);
+        double salary = grossYearlySalary(40, 2);
+        System.out.println(salary);
     }
 }
