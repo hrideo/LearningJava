@@ -9,5 +9,12 @@ public class Main{
 
         double triangleBArea = triangleB.findArea();
         System.out.println(triangleBArea);
+
+//        output instance variables
+        System.out.println(triangleA.sideLenThree);
+        System.out.println(triangleB.base);
+
+//        output class variables
+        System.out.println(Triangle.numOfSides);
     }
 }
