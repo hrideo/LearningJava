@@ -1,20 +1,12 @@
 public class Main{
 
     public static void main(String[] args){
-        Triangle triangleA = new Triangle(15, 8, 15, 8, 17);
-        Triangle triangleB = new Triangle(3, 2.598, 3, 3, 3);
+        StudentProfile profileOne = new StudentProfile("Alpha", "Zulu", "Science",
+                3.75, 2022);
+        StudentProfile profileTwo = new StudentProfile("Bravo", "Yankee", "Maths",
+                3.45, 2023);
 
-        double triangleAArea = triangleA.findArea();
-        System.out.println(triangleAArea);
-
-        double triangleBArea = triangleB.findArea();
-        System.out.println(triangleBArea);
-
-//        output instance variables
-        System.out.println(triangleA.sideLenThree);
-        System.out.println(triangleB.base);
-
-//        output class variables
-        System.out.println(Triangle.numOfSides);
+        profileTwo.incrementExpectedGraduationYear();
+        System.out.println(profileTwo.expectedGraduationYear);
     }
 }
